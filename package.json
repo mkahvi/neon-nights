@@ -1,0 +1,24 @@
+{
+  "name": "neon-nights",
+  "displayName": "Neon Nights",
+  "description": "Outrun theme",
+	"publisher": "mkahvi",
+	"author": "mkahvi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Neon Nights",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Neon Nights-color-theme.json"
+      }
+    ]
+  },
+	"private": true
+}
