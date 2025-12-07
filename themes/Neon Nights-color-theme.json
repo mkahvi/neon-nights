@@ -1,4 +1,5 @@
 {
+	// TODO: Get parameter, variable, and property names close but distinct
 	"name": "Neon Nights",
 	"type": "dark",
 	"semanticHighlighting": true,
@@ -76,8 +77,8 @@
 		"editorCodeLens.foreground": "#ffffff7c",
 		"editorBracketMatch.background": "#34294f66",
 		"editorBracketMatch.border": "#495495",
-		"editorBracketHighlight.foreground1": "#CA30FF",
-		"editorBracketHighlight.foreground2": "#AAA0EF",
+		"editorBracketHighlight.foreground1": "#AAA0EF",
+		"editorBracketHighlight.foreground2": "#CA70FF",
 		"editorBracketHighlight.foreground3": "#7A80FF",
 		"editorBracketHighlight.foreground4": "#aFaFFF",
 		"editorBracketHighlight.foreground5": "#7E76FF",
@@ -184,32 +185,25 @@
 			}
 		},
 		{
-			"name": "Variable",
-			"scope": ["variable", "entity.name.variable"],
-			"settings": {
-				"foreground": "#ef1eAb"
-			}
-		},
-		{
 			"name": "Language variable",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#fe4450",
-				"fontStyle": "bold"
-			}
-		},
-		{
-			"name": "Parameter",
-			"scope": "variable.parameter",
-			"settings": {
-				"fontStyle": "italic"
+				"foreground": "#fe4490"
 			}
 		},
 		{
 			"name": "Storage (declaration or modifier keyword)",
 			"scope": ["storage.type", "storage.modifier"],
 			"settings": {
-				"foreground": "#Eead7d"
+				"foreground": "#Fead7d"
+			}
+		},
+		{
+			"name": "JSDoc @param",
+			"scope": ["storage.type.class.jsdoc"],
+			"settings": {
+				"foreground": "#FeDd9d",
+				"fontStyle": "italic"
 			}
 		},
 		{
@@ -237,7 +231,8 @@
 			"name": "Language constant (boolean, null)",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#f97e72"
+				"foreground": "#a97ed2",
+				"fontStyle": "italic"
 			}
 		},
 		{
@@ -284,13 +279,6 @@
 			}
 		},
 		{
-			"name": "Class",
-			"scope": ["entity.name.type", "meta.attribute.class.html"],
-			"settings": {
-				"foreground": "#fe4450"
-			}
-		},
-		{
 			"name": "Inherited class",
 			"scope": "entity.other.inherited-class",
 			"settings": {
@@ -315,7 +303,17 @@
 			"name": "JS Numerics",
 			"scope": ["constant.numeric.decimal.js"],
 			"settings": {
-				"foreground": "#2EE2FA"
+				"foreground": "#FE02FA"
+			}
+		},
+		{
+			"name": "JS object path",
+			"scope": [
+				"variable.other.constant.property.js",
+				"variable.other.property.js"
+			],
+			"settings": {
+				"foreground": "#Ff7eFb"
 			}
 		},
 		{
@@ -337,18 +335,22 @@
 			"name": "Operator",
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#0ede5d"
+				"foreground": "#aeFeFd"
 			}
 		},
 		{
 			"name": "Special operator",
-			"scope": [
-				"keyword.operator.new",
-				"keyword.operator.expression",
-				"keyword.operator.logical"
-			],
+			"scope": ["keyword.operator.expression", "keyword.operator.logical"],
 			"settings": {
-				"foreground": "#eeeead",
+				"foreground": "#aeFeFd",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Special operator (NEW, DELETE)",
+			"scope": ["keyword.operator.new","keyword.operator.expression.delete"],
+			"settings": {
+				"foreground": "#FE7E1D",
 				"fontStyle": "italic"
 			}
 		},
@@ -444,16 +446,6 @@
 			"scope": "switch-block.expr.js",
 			"settings": {
 				"foreground": "#72f1b8"
-			}
-		},
-		{
-			"name": "JS object path",
-			"scope": [
-				"variable.other.constant.property.js",
-				"variable.other.property.js"
-			],
-			"settings": {
-				"foreground": "#12e2aa"
 			}
 		},
 		{
@@ -869,5 +861,20 @@
 				"foreground": "#72f1b8"
 			}
 		}
-	]
+	],
+	"semanticTokenColors": {
+		"variable.defaultLibrary": {
+			"foreground": "#0FB"
+		},
+		"parameter": {
+			"foreground": "#DFFF30",
+			"fontStyle": "italic"
+		},
+		"class": {
+			"foreground": "#Fe5450"
+		},
+		"variable.local": {
+			"foreground": "#5fFe7b"
+		}
+	}
 }
