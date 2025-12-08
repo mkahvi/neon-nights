@@ -45,6 +45,7 @@
 		"activityBarBadge.foreground": "#2a2139",
 		"sideBar.background": "#1A122A",
 		"sideBar.foreground": "#9F9FAF",
+		"sideBar.border": "#326",
 		"sideBar.dropBackground": "#34294f4c",
 		"sideBarSectionHeader.background": "#241b3f",
 		"sideBarSectionHeader.foreground": "#DFDFEF",
@@ -300,20 +301,31 @@
 			}
 		},
 		{
-			"name": "JS Numerics",
-			"scope": ["constant.numeric.decimal.js"],
+			"name": "Object Member",
+			"scope": "meta.object.member",
 			"settings": {
-				"foreground": "#FE02FA"
+				"foreground": "#F00"
 			}
 		},
 		{
 			"name": "JS object path",
-			"scope": [
-				"variable.other.constant.property.js",
-				"variable.other.property.js"
-			],
+			"scope": ["variable.other.constant.property", "variable.other.property"],
 			"settings": {
-				"foreground": "#Ff7eFb"
+				"foreground": "#FFDF30"
+			}
+		},
+		{
+			"name": "JS Object (Other)",
+			"scope": "variable.other.object",
+			"settings": {
+				"foreground": "#FE4450"
+			}
+		},
+		{
+			"name": "JS Object Property (Other)",
+			"scope": "variable.other.object.property",
+			"settings": {
+				"foreground": "#FE4450"
 			}
 		},
 		{
@@ -335,20 +347,41 @@
 			"name": "Operator",
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#aeFeFd"
+				"foreground": "#7eaead"
+			}
+		},
+		{
+			"name": "Operator",
+			"scope": "keyword.operator.arithmetic",
+			"settings": {
+				"foreground": "#EEB"
+			}
+		},
+		{
+			"name": "Operator / Assignment",
+			"scope": "keyword.operator.assignment",
+			"settings": {
+				"foreground": "#AA9"
 			}
 		},
 		{
 			"name": "Special operator",
-			"scope": ["keyword.operator.expression", "keyword.operator.logical"],
+			"scope": ["keyword.operator.expression"],
 			"settings": {
-				"foreground": "#aeFeFd",
+				"foreground": "#EEDEAD",
 				"fontStyle": "italic"
 			}
 		},
 		{
+			"name": "Special operator",
+			"scope": ["keyword.operator.logical"],
+			"settings": {
+				"foreground": "#EEDEAD"
+			}
+		},
+		{
 			"name": "Special operator (NEW, DELETE)",
-			"scope": ["keyword.operator.new","keyword.operator.expression.delete"],
+			"scope": ["keyword.operator.new", "keyword.operator.expression.delete"],
 			"settings": {
 				"foreground": "#FE7E1D",
 				"fontStyle": "italic"
@@ -393,7 +426,7 @@
 			"name": "Object literal key / property",
 			"scope": ["meta.object-literal.key", "support.type.property-name"],
 			"settings": {
-				"foreground": "#ff7edb"
+				"foreground": "#72A188"
 			}
 		},
 		{
@@ -495,7 +528,7 @@
 		},
 		{
 			"name": "Markup text",
-			"scope": ["text.html", "keyword.operator.assignment"],
+			"scope": "text.html",
 			"settings": {
 				"foreground": "#ffffffee"
 			}
@@ -860,21 +893,54 @@
 			"settings": {
 				"foreground": "#72f1b8"
 			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": "punctuation.separator",
+			"settings": {
+				"foreground": "#AAA"
+			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": "punctuation.terminator",
+			"settings": {
+				"foreground": "#777"
+			}
+		},
+		{
+			"name": "Numeric Constant",
+			// Same as inbuilt default
+			"scope": ["constant.numeric"],
+			"settings": {
+				"foreground": "#D94EE2"
+			}
+		},
+		{
+			"name": "Primitives",
+			"scope": ["support.type.primitive"],
+			"settings": {
+				"foreground": "#A5E"
+			}
 		}
 	],
 	"semanticTokenColors": {
 		"variable.defaultLibrary": {
 			"foreground": "#0FB"
 		},
-		"parameter": {
-			"foreground": "#DFFF30",
-			"fontStyle": "italic"
-		},
 		"class": {
 			"foreground": "#Fe5450"
 		},
+		"parameter": {
+			"foreground": "#aFFF30",
+			"fontStyle": "italic"
+		},
 		"variable.local": {
-			"foreground": "#5fFe7b"
+			"foreground": "#3fde7b"
+		},
+		"property": {
+			// No distinction between declaration and access
+			"foreground": "#92B1A8"
 		}
 	}
 }

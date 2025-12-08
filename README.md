@@ -4,6 +4,8 @@ Hacked up Outrun-inspired color theme. Not great, but better than default.
 
 For personal use, but here publicly because lol why not.
 
+I'm bad with color, and I'm mostly working with trying to make things distinct, so this is probably not as Outrun-style as it could be.
+
 ## Install?
 
 Uh. I dunno? Put it in vscode extensions as `mkahvi.neon-nights-0.0.1`? It might work?
